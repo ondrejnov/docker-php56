@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y locales php5-sqlite php5-mysql php5-mem
 	rm -rvf /usr/local/etc/php/conf.d/docker-php-ext-curl.ini; \
 	rm -rf /tmp/*
 
-COPY php.ini /usr/local/etc/php/conf.d/php.ini
+COPY php.ini /etc/php5/apache2/conf.d/php.ini
 COPY apache2.conf /etc/apache2/apache2.conf
 
 RUN echo cs_CZ.UTF-8 UTF-8  >> /etc/locale.gen
