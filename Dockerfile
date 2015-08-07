@@ -4,7 +4,7 @@ MAINTAINER Ondrej Novak "novakondrej@seznam.cz"
 
 RUN a2enmod rewrite vhost_alias
 
-RUN apt-get update && apt-get install -y locales php5-sqlite php5-mysql php5-memcache memcached php-gettext gettext libpng12-dev libjpeg-dev libpq-dev imagemagick libxml2-dev \
+RUN apt-get update && apt-get install -y locales php5-gd php5-sqlite php5-mysql php5-memcache memcached php-gettext gettext libpng12-dev libjpeg-dev libpq-dev imagemagick libxml2-dev \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
 	&& docker-php-ext-install gd mbstring pdo pdo_mysql zip exif soap \
