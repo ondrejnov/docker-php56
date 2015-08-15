@@ -20,4 +20,5 @@ RUN echo cs_CZ.UTF-8 UTF-8  >> /etc/locale.gen \
 	&& locale-gen
 
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
