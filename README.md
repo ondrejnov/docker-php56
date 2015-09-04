@@ -1,4 +1,4 @@
-# PHP 5.6 + Apache PFM
+# PHP 5.6 + Apache PFM + Exim4 MTA
 
 ### PHP extensions
 mysqli
